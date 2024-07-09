@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#loading {
+    display: none;
+    background-color: #666666;
+    background-image: url("../img/progress_spinner.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.4;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 10000000;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+header i{
+    color: darkslategray;
+}
+header .options{
+    display: none;
+}
+header > nav img{
+    width: 10vw;
+    height: 7vh;
+}
+.breadcrumb-item{
+    font-weight: 600;
+}
+.breadcrumb{
+    background-color: #adb5bd;
+}
+.sign-up, .log-in{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    color: darkslategray;
+}
+.buttons{
+    height: 100%;
+    width: 25%;
+}
+.buttons > button{
+    font-size: 5vw;
+    font-weight: 900;
+}
+
+.filters{
+    width: 70%;
+    text-align: center;
+    margin-top: 10vh;
+    color: darkslategray;
+}
+.filters .filter{
+    display: flex;
+    justify-content: center;
+}
+.filters .filter img{
+    height: 25px;
+    width: 25px;
+    border: 1px solid darkslategray;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.properties{
+    width: 70%;
+}
+.property-card{
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.room-pic{
+    height: 150px;
+}
+.room-pic img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+footer{
+    background-color: darkslategray;
+    padding: 5vh 2vw;
+}
+footer a{
+    margin: 0 3vw;
+    font-size: 1.5vw;
+    font-weight: 500;
+    color: antiquewhite;
+}
+footer a:hover{
+    color: white;
+}
+footer > p{
+    margin-top: 3vh;
+}
+
+@media (max-width:767px) {
+    header>nav img{
+        width: 25vw;
+    }
+    header .options{
+        display: inline-block;
+        text-align: end;
+    }
+    header .options > button{
+        background-color: darkslategray;
+    }
+    header .options > button i{
+        color: white;
+    }
+
+    .filters{
+        width: 90%;
+        flex-direction: column;
+    }
+
+    footer a {
+        font-size: 4vw;
+    }
+}
